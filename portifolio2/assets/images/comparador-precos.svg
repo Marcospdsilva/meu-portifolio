@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sombra da página -->
+    <path d="M350,30 L350,270 Q350,280 340,280 L60,280 Q50,280 50,270 L50,30 Q50,20 60,20 L340,20 Q350,20 350,30" 
+          fill="#f0f0f0" filter="url(#shadow)"/>
+    
+    <!-- Definição da sombra -->
+    <defs>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dx="4" dy="4" result="offsetblur"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.3"/>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+        </marker>
+    </defs>
+
+    <!-- Página principal -->
+    <path d="M340,20 L340,270 Q340,270 330,270 L60,270 Q50,270 50,260 L50,30 Q50,20 60,20 L340,20" 
+          fill="white" stroke="#ddd" stroke-width="1"/>
+
+    <!-- Conteúdo da página -->
+    <rect x="100" y="80" width="80" height="120" fill="#6c5ce7" rx="5"/>
+    <rect x="220" y="80" width="80" height="120" fill="#00b894" rx="5"/>
+    <text x="140" y="140" text-anchor="middle" font-family="Arial" font-size="24" fill="white">R$99</text>
+    <text x="260" y="140" text-anchor="middle" font-family="Arial" font-size="24" fill="white">R$79</text>
+    <path d="M180 140 L220 140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Canto dobrado -->
+    <path d="M340,20 L340,70 L290,20 Z" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+    <path d="M340,20 L340,70 L290,20 Z" fill="none" stroke="#ccc" stroke-width="1"/>
+
+    <!-- Título -->
+    <text x="200" y="220" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Comparador de Preços</text>
+</svg> 

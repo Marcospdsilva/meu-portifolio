@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sombra da página -->
+    <path d="M350,30 L350,270 Q350,280 340,280 L60,280 Q50,280 50,270 L50,30 Q50,20 60,20 L340,20 Q350,20 350,30" 
+          fill="#f0f0f0" filter="url(#shadow)"/>
+    
+    <!-- Definição da sombra -->
+    <defs>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dx="4" dy="4" result="offsetblur"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.3"/>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Página principal -->
+    <path d="M340,20 L340,270 Q340,270 330,270 L60,270 Q50,270 50,260 L50,30 Q50,20 60,20 L340,20" 
+          fill="white" stroke="#ddd" stroke-width="1"/>
+
+    <!-- Conteúdo da página -->
+    <circle cx="195" cy="120" r="50" fill="#ff6b6b"/>
+    <path d="M195 90 C185 110, 205 110, 195 90" stroke="#333" stroke-width="2" fill="none"/>
+    <rect x="170" y="110" width="50" height="30" fill="#4a4a4a"/>
+    
+    <!-- Canto dobrado -->
+    <path d="M340,20 L340,70 L290,20 Z" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+    <path d="M340,20 L340,70 L290,20 Z" fill="none" stroke="#ccc" stroke-width="1"/>
+
+    <!-- Título -->
+    <text x="200" y="220" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Sistema de Reservas</text>
+</svg> 

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a2e0e6e6e2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Meu Portfólio</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="actions">
+        <button id="theme-toggle" type="button" title="Alternar tema">🌙</button>
+        <a href="assets/docs/curriculo.pdf" download class="btn-cv">
+          <i class="fas fa-file-download"></i>
+          Currículo
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="section inicio fade-in">
+      <p id="welcome-text" class="falling-text welcome-message">Bem-vindo ao meu portfólio!!!!!</p>
+      <h1>Olá, Meu nome é Marcos sou um desenvolvedor!</h1>
+    </section>
+    <section id="sobre" class="section sobre fade-in">
+      <h2>Sobre Mim</h2>
+      <p>Como Analista de Sistemas, combino minha paixão por tecnologia com uma sólida formação técnica para criar soluções inovadoras. Minha experiência abrange desde o desenvolvimento de sistemas até o suporte técnico especializado.</p>
+      <p>Possuo expertise técnica em múltiplas áreas:</p>
+      <ul class="skills-list">
+        <li>💻 Análise e Desenvolvimento de Sistemas</li>
+        <li>🔧 Manutenção e Suporte em Informática</li>
+        <li>📱 Especialista em Reparo de Smartphones e Tablets</li>
+      </ul>
+
+      <p>Sou um entusiasta da tecnologia em constante evolução, sempre buscando aprender novas ferramentas e metodologias para me manter atualizado no dinâmico mundo da tecnologia. Meu compromisso com o aprendizado contínuo me permite oferecer soluções cada vez mais eficientes e inovadoras.</p>
+    </section>
+
+    <section id="projetos" class="section projetos fade-in">
+      <h2>Projetos</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn left" type="button" onclick="moveCarousel(-1)">❮</button>
+        <div class="carousel" id="carousel">
+          <div class="carousel-item">
+            <img src="assets/images/reserva-churrasqueira.svg" alt="Sistema de Reserva de Churrasqueira">
+            <h3>Sistema de Reserva de Churrasqueira</h3>
+            <p>Aplicação web para gerenciamento de reservas de churrasqueira em condomínios. Desenvolvido com tecnologias modernas para facilitar o processo de agendamento.</p>
+            <div class="project-links">
+              <a href="https://marcospdsilva.github.io/sistema-reserva-churrasqueira" class="project-link" target="_blank" rel="noopener">Ver Projeto</a>
+              <a href="https://github.com/marcospdsilva/sistema-reserva-churrasqueira" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/agendamento-corte.svg" alt="Sistema de Agendamento de Cortes">
+            <h3>Agendamento de Cortes</h3>
+            <p>Aplicativo para agendamento de cortes de cabelo, permitindo que clientes marquem horários com seus barbeiros favoritos. Interface intuitiva e sistema de notificações.</p>
+            <div class="project-links">
+              <a href="https://marcospdsilva.github.io/agendamento-cortes" class="project-link" target="_blank" rel="noopener">Ver Projeto</a>
+              <a href="https://github.com/marcospdsilva/agendamento-cortes" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/loja-virtual.svg" alt="Loja Virtual com WhatsApp">
+            <h3>Loja Virtual com WhatsApp</h3>
+            <p>E-commerce integrado com WhatsApp para facilitar as vendas. Inclui carrinho de compras, catálogo de produtos e finalização do pedido diretamente pelo WhatsApp.</p>
+            <div class="project-links">
+              <a href="https://marcospdsilva.github.io/loja-virtual-whatsapp" class="project-link" target="_blank" rel="noopener">Ver Projeto</a>
+              <a href="https://github.com/marcospdsilva/loja-virtual-whatsapp" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/comparador-precos.svg" alt="Comparador de Preços">
+            <h3>Comparador de Preços</h3>
+            <p>Ferramenta que permite comparar preços de produtos entre diferentes lojas online, ajudando usuários a encontrar as melhores ofertas.</p>
+            <div class="project-links">
+              <a href="https://marcospdsilva.github.io/comparador-precos" class="project-link" target="_blank" rel="noopener">Ver Projeto</a>
+              <a href="https://github.com/marcospdsilva/comparador-precos" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/portfolio.svg" alt="Portfólio Pessoal">
+            <h3>Portfólio Pessoal</h3>
+            <p>Site pessoal desenvolvido com HTML, CSS e JavaScript, apresentando meus projetos e habilidades de forma interativa e responsiva.</p>
+            <div class="project-links">
+              <a href="https://marcospdsilva.github.io/portfolio" class="project-link" target="_blank" rel="noopener">Ver Projeto</a>
+              <a href="https://github.com/marcospdsilva/portfolio" class="project-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn right" type="button" onclick="moveCarousel(1)">❯</button>
+      </div>
+    </section>
+
+    <section id="contato" class="section contato fade-in">
+      <h2>Contato</h2>
+      <div class="social-icons">
+        <a href="https://wa.me/5521998198964" target="_blank" rel="noopener" title="WhatsApp">
+          <img src="assets/svg/whatsapp.svg" alt="WhatsApp" class="social-icon">
+          <span class="sr-only">WhatsApp</span>
+        </a>
+        <a href="https://www.linkedin.com/in/marcos/silva" target="_blank" rel="noopener" title="LinkedIn">
+          <img src="assets/svg/linkedin.svg" alt="LinkedIn" class="social-icon">
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="https://github.com/marcospdsilva" target="_blank" rel="noopener" title="GitHub">
+          <img src="assets/svg/github.svg" alt="GitHub" class="social-icon">
+          <span class="sr-only">GitHub</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Meu Portfólio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
